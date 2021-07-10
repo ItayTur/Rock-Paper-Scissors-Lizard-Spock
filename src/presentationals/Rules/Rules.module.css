@@ -1,0 +1,24 @@
+.Rules {
+    position: relative;
+}
+
+.Title {
+    text-align: left;
+    margin-top: 0;
+}
+
+@media(max-width: 650px) {
+    .Rules {
+        width: unset;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 80vh;
+        justify-content: space-around;
+    }
+    .RulesImage {
+        width: 85%;
+        max-width: 300px;
+    }
+}

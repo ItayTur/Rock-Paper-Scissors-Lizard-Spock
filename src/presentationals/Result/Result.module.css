@@ -1,0 +1,51 @@
+.Result {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    animation: squeezIn 3s linear 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    width: 0;
+    align-self: center;
+    margin: 0 10px;
+}
+
+.ResultTitle {
+    font-size: 3vw;
+    margin-bottom: 10px;
+    animation: fadeIn 3s linear 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    white-space: nowrap;
+}
+
+@keyframes squeezIn {
+    100% {
+        opacity: 1;
+        width: 21%;
+        margin: 0 50px;
+    }
+}
+
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
+}
+
+@media(max-width: 650px) {
+    .Result {
+        order: 3;
+        flex: 1;
+        margin: unset;
+    }
+    .ResultTitle {
+        font-size: 40px;
+    }
+}
+
+@media(max-width: 300px) {
+    .ResultTitle {
+        font-size: 12vw;
+    }
+}

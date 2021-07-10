@@ -1,0 +1,27 @@
+.Score {
+    width: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+    border-radius: 5px;
+    color: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+.ScoreNumber {
+    line-height: 0.8em;
+    font-size: 75px;
+}
+
+@media(max-width: 650px) {
+    .Score {
+        height: 50px;
+        width: 50px;
+    }
+    .ScoreNumber {
+        font-size: 25px;
+    }
+    .ScoreTitle {
+        font-size: 10px;
+    }
+}

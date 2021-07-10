@@ -1,0 +1,13 @@
+.Weapons {
+    position: relative;
+}
+
+.BackgroundImg {
+    height: 225px;
+}
+
+@media(max-width: 650px) {
+    .BackgroundImg {
+        height: 200px;
+    }
+}

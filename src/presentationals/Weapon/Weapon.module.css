@@ -1,0 +1,144 @@
+.Weapon {
+    border: none;
+    z-index: 1;
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px -5px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.Weapon::before {
+    content: '';
+    width: 81%;
+    height: 81%;
+    position: absolute;
+    background: transparent;
+    box-shadow: inset 0px 5px 3px #ccc;
+    border-radius: 50%;
+}
+
+.WeaponContainer {
+    background:  rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.Icon {
+    width: 40px;
+}
+
+.Win::before {
+    animation: ripple 3s linear 2s infinite;
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0rem rgba(255, 255, 255, 0.2), 0 0 0 1rem rgba(255, 255, 255, 0.2), 0 0 0 2rem rgba(255, 255, 255, 0.2), 0 0 0 5rem rgba(255, 255, 255, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 0 1rem rgba(255, 255, 255, 0.2), 0 0 0 2rem rgba(255, 255, 255, 0.2), 0 0 0 5rem rgba(255, 255, 255, 0.2), 0 0 0 8rem rgba(255, 255, 255, 0.2);
+    }
+}
+
+.Weapon:focus {
+    outline: none;
+}
+
+.Weapon:focus-visible {
+    outline: auto;
+}
+
+.Paper {
+    top: 33px;
+    right: -50px;
+    background: linear-gradient(#fff, #fff) content-box, linear-gradient(to right, hsl(230, 89%, 62%), hsl(230, 89%, 65%)) border-box;
+}
+
+.Scissors {
+    top: -40px;
+    left: 66px;
+    background: linear-gradient(#fff, #fff) content-box, linear-gradient(to right, hsl(39, 89%, 49%), hsl(40, 84%, 53%)) border-box;
+}
+
+.Rock {
+    bottom: -45px;
+    right: -11px;
+    background: linear-gradient(#fff, #fff) content-box, linear-gradient(to right, hsl(349, 71%, 52%), hsl(349, 70%, 56%)) border-box;
+}
+
+.Spock {
+    top: 33px;
+    left: -50px;
+    background: linear-gradient(#fff, #fff) content-box, linear-gradient(to right, hsl(189, 59%, 53%), hsl(189, 58%, 57%)) border-box;
+}
+
+.Lizard {
+    bottom: -45px;
+    left: -11px;
+    background: linear-gradient(#fff, #fff) content-box, linear-gradient(to right, hsl(261, 73%, 60%), hsl(261, 72%, 63%)) border-box;
+}
+
+.InPick {
+    position: relative;
+    top: unset;
+    left: unset;
+    bottom: unset;
+    right: unset;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards;
+    animation-duration: 4s;
+    opacity: 0;
+    padding: 23px;
+    width: 180px;
+    height: 180px;
+}
+
+.Player {
+    opacity: 1;
+}
+
+.InPick::before {
+    width: 75%;
+    height: 75%;
+}
+
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
+}
+
+@media(max-width: 650px) {
+    .Weapon {
+        height: 90px;
+        width: 90px;
+    }
+    .Weapon::before {
+        width: 71px;
+    }
+    .Scissors {
+        left: 60px;
+    }
+    .InPick {
+        top: 0;
+        bottom: unset;
+        height: 100px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
+        bottom: 10px;
+        padding: 10px;
+    }
+    .InPick::before {
+        width: 81%;
+        height: 81%;
+    }
+}
